@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top center">
+        <header class="header">
+            <a class="logo" href="index.html"><img class="logo__img" src="img/logo.svg" alt="logo"></a>
+            <input placeholder="Поиск" class="header__input" type="text">
+            <nav class="menu">
+                <ul class="list">
+                    <li><a class="list__link list__link_decoration" href="catalog.html">Каталог</a></li>
+                    <li class="list__link-block">
+                    <input type="checkbox" id="form-toggle" class="hidden">
+                    <a class="list__link list__link_decoration" href="#" onclick="document.getElementById('form-toggle').click(); return false;">Корзина</a>
+                        <form action="#" class="header-form" method="get" id="header-form">
+                            <div class="cart-content-items">
+                                <div class="cart-item cart-item_show">
+                                    <div class="cart-left">
+                                        <img class="cart-img" src="img/cart-1.jpeg" alt="cart image">
+                                        <div class="cart-info">
+                                            <h4>Стол MENU</h4>
+                                            <p class="cart-price">34 000 руб.</p>
+                                            <div class="cart-link-box">
+                                                <a class="cart-link" href="#">Избранные</a>
+                                                <a class="cart-link" href="#">Удалить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-number-box">
+                                        <input class="cart-number" type="number" value="1" min="1">
+                                        <div class="cart-number-arrows">
+                                            <img class="cart-number-arrows-up" src="img/up.svg" alt="up">
+                                            <img class="cart-number-arrows-down" src="img/down.svg" alt="down">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-left">
+                                        <img class="cart-img" src="img/cart-2.jpeg" alt="cart image">
+                                        <div class="cart-info">
+                                            <h4>Диван NASTAN</h4>
+                                            <p class="cart-price">80 000 руб.</p>
+                                            <div class="cart-link-box">
+                                                <a class="cart-link" href="#">Избранные</a>
+                                                <a class="cart-link" href="#">Удалить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-number-box">
+                                        <input class="cart-number" type="number" value="1" min="1">
+                                        <div class="cart-number-arrows">
+                                            <img class="cart-number-arrows-up" src="img/up.svg" alt="up">
+                                            <img class="cart-number-arrows-down" src="img/down.svg" alt="down">
+                                        </div>
+                                    </div>
+                                </div>         
+                            </div>
+                            <div class="cart-navigation cart-navigation_show">
+                                <p class="cart-total">Итого: <strong class="cart-total-price">114 000 руб.</strong></p>
+                                <button class="cart-button">
+                                    Оформить заказ
+                                </button>
+                            </div>
+
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-mob">
+                <a href="#">
+                    <svg width="15.366211" height="15.360107" viewBox="0 0 15.3662 15.3601" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                            Created with Pixso.
+                    </desc>
+                    <defs/>
+                    <path id="Vector-1" d="M11.53 10.41C12.52 9.14 12.99 7.54 12.84 5.93C12.68 4.33 11.93 2.84 10.72 1.78C9.51 0.71 7.94 0.15 6.33 0.2C4.72 0.25 3.19 0.91 2.05 2.05C0.91 3.19 0.25 4.72 0.2 6.33C0.15 7.94 0.71 9.51 1.78 10.72C2.85 11.93 4.33 12.68 5.94 12.83C7.54 12.99 9.14 12.52 10.42 11.53L10.45 11.56L13.81 14.92C13.88 15 13.97 15.05 14.07 15.09C14.16 15.13 14.27 15.16 14.37 15.16C14.47 15.16 14.58 15.13 14.67 15.09C14.77 15.05 14.86 15 14.93 14.92C15 14.85 15.06 14.76 15.1 14.67C15.14 14.57 15.16 14.47 15.16 14.36C15.16 14.26 15.14 14.16 15.1 14.06C15.06 13.96 15 13.88 14.93 13.8L11.57 10.44C11.56 10.43 11.55 10.42 11.53 10.41ZM9.89 3.17C10.34 3.61 10.69 4.13 10.94 4.71C11.18 5.29 11.31 5.91 11.31 6.53C11.31 7.16 11.19 7.78 10.95 8.36C10.71 8.94 10.36 9.47 9.92 9.91C9.47 10.36 8.95 10.71 8.37 10.95C7.79 11.18 7.17 11.31 6.54 11.3C5.91 11.3 5.29 11.17 4.72 10.93C4.14 10.69 3.61 10.33 3.17 9.88C2.29 8.99 1.8 7.79 1.81 6.53C1.81 5.28 2.31 4.08 3.2 3.19C4.09 2.31 5.29 1.81 6.54 1.8C7.79 1.8 9 2.29 9.89 3.17Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    <path id="Vector-2" d="M13.04 7.14Q13.09 6.54 13.03 5.92Q12.98 5.3 12.81 4.71Q12.63 4.12 12.35 3.56Q12.07 3.01 11.69 2.53Q11.32 2.04 10.85 1.63Q10.38 1.22 9.86 0.91Q9.33 0.59 8.75 0.38Q8.16 0.17 7.55 0.07Q6.95 -0.02 6.33 0Q5.7 0.02 5.11 0.15Q4.51 0.28 3.94 0.53Q3.37 0.78 2.86 1.12Q2.35 1.47 1.91 1.91Q1.47 2.35 1.13 2.85Q0.78 3.36 0.53 3.93Q0.29 4.5 0.15 5.1Q0.02 5.7 0 6.32Q-0.02 6.95 0.07 7.55Q0.17 8.16 0.38 8.74Q0.59 9.33 0.9 9.86Q1.22 10.38 1.63 10.85Q2.04 11.32 2.53 11.69Q3.01 12.07 3.57 12.35Q4.12 12.63 4.71 12.81Q5.3 12.98 5.92 13.03Q6.54 13.09 7.15 13.03Q7.76 12.98 8.36 12.8Q8.96 12.63 9.5 12.35Q9.97 12.11 10.4 11.79L13.67 15.06Q13.74 15.13 13.82 15.19Q13.9 15.24 13.99 15.28Q14.08 15.32 14.18 15.34Q14.27 15.36 14.37 15.36Q14.47 15.36 14.56 15.34Q14.66 15.32 14.75 15.28Q14.84 15.24 14.92 15.19Q15 15.13 15.07 15.06Q15.14 14.99 15.19 14.91Q15.25 14.83 15.29 14.74Q15.32 14.65 15.34 14.56Q15.36 14.46 15.36 14.36Q15.36 14.26 15.34 14.17Q15.32 14.07 15.29 13.98Q15.25 13.89 15.19 13.81Q15.14 13.73 15.07 13.66L11.8 10.39Q12.11 9.96 12.35 9.5Q12.63 8.95 12.8 8.35Q12.98 7.75 13.04 7.14ZM11.53 10.41C12.52 9.14 12.99 7.54 12.84 5.93C12.68 4.33 11.93 2.84 10.72 1.78C9.51 0.71 7.94 0.15 6.33 0.2C4.72 0.25 3.19 0.91 2.05 2.05C0.91 3.19 0.25 4.72 0.2 6.33C0.15 7.94 0.71 9.51 1.78 10.72C2.85 11.93 4.33 12.68 5.94 12.83C7.54 12.99 9.14 12.52 10.42 11.53L10.45 11.56L13.81 14.92C13.88 15 13.97 15.05 14.07 15.09C14.16 15.13 14.27 15.16 14.37 15.16C14.47 15.16 14.58 15.13 14.67 15.09C14.77 15.05 14.86 15 14.93 14.92C15 14.85 15.06 14.76 15.1 14.67C15.14 14.57 15.16 14.47 15.16 14.36C15.16 14.26 15.14 14.16 15.1 14.06C15.06 13.96 15 13.88 14.93 13.8L11.57 10.44C11.56 10.43 11.55 10.42 11.53 10.41ZM9.89 3.17C10.34 3.61 10.69 4.13 10.94 4.71C11.18 5.29 11.31 5.91 11.31 6.53C11.31 7.16 11.19 7.78 10.95 8.36C10.71 8.94 10.36 9.47 9.92 9.91C9.47 10.36 8.95 10.71 8.37 10.95C7.79 11.18 7.17 11.31 6.54 11.3C5.91 11.3 5.29 11.17 4.72 10.93C4.14 10.69 3.61 10.33 3.17 9.88C2.29 8.99 1.8 7.79 1.81 6.53C1.81 5.28 2.31 4.08 3.2 3.19C4.09 2.31 5.29 1.81 6.54 1.8C7.79 1.8 9 2.29 9.89 3.17ZM10.33 4Q10.58 4.37 10.75 4.79Q10.93 5.21 11.02 5.64Q11.11 6.08 11.11 6.54Q11.11 6.99 11.03 7.43Q10.94 7.87 10.77 8.29Q10.59 8.71 10.35 9.08Q10.1 9.45 9.78 9.77Q9.46 10.09 9.08 10.34Q8.71 10.59 8.29 10.76Q7.87 10.93 7.43 11.02Q7 11.11 6.54 11.1Q6.09 11.1 5.65 11.01Q5.21 10.92 4.79 10.75Q4.37 10.57 4 10.32Q3.64 10.07 3.32 9.74Q3 9.42 2.76 9.05Q2.52 8.69 2.35 8.27Q2.18 7.85 2.09 7.42Q2.01 6.99 2.01 6.54Q2.01 6.08 2.1 5.65Q2.19 5.22 2.36 4.8Q2.53 4.39 2.78 4.02Q3.02 3.65 3.34 3.34Q3.66 3.02 4.03 2.77Q4.39 2.53 4.81 2.35Q5.23 2.18 5.66 2.09Q6.09 2.01 6.54 2Q6.99 2 7.42 2.09Q7.86 2.17 8.28 2.34Q8.69 2.51 9.06 2.75Q9.43 2.99 9.75 3.31Q10.07 3.63 10.33 4Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </svg>
+                </a>
+                <a href="catalog.html">
+                    <svg width="19.199463" height="19.199951" viewBox="0 0 19.1995 19.2" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                <desc>
+	                		Created with Pixso.
+	                </desc>
+	                <defs/>
+	                <rect id="Rectangle-46" width="4.571429" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-41" y="7.314209" width="4.571429" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-47" y="14.628540" width="4.571429" height="4.571428" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-43" x="14.627930" width="4.571428" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-48" x="7.313477" y="7.314209" width="4.571429" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-45" x="7.313477" y="14.628540" width="4.571429" height="4.571428" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-49" x="7.313477" width="4.571429" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+	                <rect id="Rectangle-42" x="14.627930" y="7.314209" width="4.571428" height="4.571429" fill="#FFFFFF" fill-opacity="1.000000"/>
+                	<rect id="Rectangle-44" x="14.627930" y="14.628540" width="4.571428" height="4.571428" fill="#FFFFFF" fill-opacity="1.000000"/>
+                    </svg>
+                </a>
+                <a href="cart.html">
+                    <svg width="18.717285" height="16.666626" viewBox="0 0 18.7173 16.6666" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                            Created with Pixso.
+                    </desc>
+                    <defs/>
+                    <path id="Vector-3" d="M11.45 16.66C12.01 16.66 12.54 16.44 12.93 16.05C13.32 15.66 13.54 15.13 13.54 14.58C13.54 14.03 13.32 13.5 12.93 13.11C12.54 12.71 12.01 12.5 11.45 12.5C10.9 12.5 10.37 12.71 9.98 13.11C9.59 13.5 9.37 14.03 9.37 14.58C9.37 15.13 9.59 15.66 9.98 16.05C10.37 16.44 10.9 16.66 11.45 16.66ZM4.16 16.66C4.71 16.66 5.24 16.44 5.63 16.05C6.03 15.66 6.24 15.13 6.24 14.58C6.24 14.03 6.03 13.5 5.63 13.11C5.24 12.71 4.71 12.5 4.16 12.5C3.61 12.5 3.08 12.71 2.69 13.11C2.3 13.5 2.08 14.03 2.08 14.58C2.08 15.13 2.3 15.66 2.69 16.05C3.08 16.44 3.61 16.66 4.16 16.66ZM17.74 2C18 1.99 18.25 1.88 18.43 1.69C18.61 1.51 18.71 1.26 18.71 1C18.71 0.74 18.61 0.49 18.43 0.3C18.25 0.11 18 0 17.74 0L16.54 0C15.6 0 14.79 0.65 14.59 1.56L13.28 7.44C13.08 8.36 12.27 9.01 11.33 9.01L3.5 9.01L2 3L11.73 3C11.99 2.99 12.23 2.88 12.41 2.69C12.59 2.5 12.69 2.26 12.69 2C12.69 1.74 12.59 1.49 12.41 1.31C12.23 1.12 11.99 1.01 11.73 1L2 1C1.69 1 1.39 1.07 1.12 1.2C0.85 1.33 0.61 1.53 0.42 1.77C0.23 2.01 0.1 2.29 0.04 2.58C-0.02 2.88 -0.02 3.19 0.06 3.49L1.56 9.5C1.67 9.93 1.92 10.31 2.27 10.59C2.62 10.86 3.05 11.01 3.5 11.01L11.33 11.01C12.24 11.01 13.12 10.7 13.83 10.13C14.54 9.56 15.04 8.77 15.24 7.88L16.54 2L17.74 2Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                </a>                
+            </div>
+        </header>
+        <section class="top__content">
+            <h1 class="top__heading">Всё, чего заслуживает ваш дом</h1>
+            <p class="top__text">Наша мебель — ваше отражение</p>
+            <a href="catalog.html" class="top__link">Перейти в каталог</a>
+        </section>
+    </div>
+    <section class="for-box center">
+        <h2 class="for-box__heading">Мебель для ... </h2>
+        <section class="for">
+            <div class="for__item for__item1 for__item_big">ОТДЫХА</div>
+            <div class="for__item for__item2 for__item_big">РАБОТЫ</div>
+            <div class="for__item for__item3">КУХНИ</div>
+            <div class="for__item for__item4">ДЕТСКОЙ</div>
+            <div class="for__item for__item5">ВАННОЙ</div>
+        </section>
+    </section>
+
+
+    <section class="special center">
+        <h2 class="special__heading">Специальные предложения</h2>
+        <div class="special__content">
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_180">
+                                    <rect id="basic-heart_outline" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_181)">
+                                <path id="coolicon-1" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_182">
+                                <rect id="shopping-bag-line-1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_183)">
+                            <path id="Vector-4" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/lustre_VODA.jpeg" alt="Люстра VODA">
+                <a href="">
+                    <h3 class="card__product">Люстра VODA</h3>
+                </a>
+                <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный
+                    парящий эффект.</p>
+                <div class="card__box-price">
+                    <p class="card__price">45 000 руб.</p>
+                    <p class="card__price card__price_old-price">67 000 руб</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_184">
+                                    <rect id="basic-heart_outline-1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_185)">
+                                <path id="coolicon-2" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_186">
+                                <rect id="shopping-bag-line-2" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_2" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_187)">
+                            <path id="Vector-5" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/sofa_RONALD.jpeg" alt="Диван RONALD">
+                <a href="">
+                    <h3 class="card__product">Диван RONALD</h3>
+                </a>
+                <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.
+                </p>
+                <div class="card__box-price">
+                    <p class="card__price">156 000 руб.</p>
+                    <p class="card__price card__price_old-price">198 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_188">
+                                    <rect id="basic-heart_outline-2" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_189)">
+                                <path id="coolicon-3" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_190">
+                                <rect id="shopping-bag-line-3" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_3" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_191)">
+                            <path id="Vector-6" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/dresser_VENT.jpeg" alt="Комод VENT">
+                <a href="">
+                    <h3 class="card__product">Комод VENT</h3>
+                </a>
+                <p class="card__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                <div class="card__box-price">
+                    <p class="card__price">34 000 руб.</p>
+                    <p class="card__price card__price_old-price">45 000 руб.</p>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+
+    <section class="products center">
+        <h2 class="products__heading">Каталог товаров</h2>
+        <div class="products__content">
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_192">
+                                    <rect id="basic-heart_outline-3" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_193)">
+                                <path id="coolicon-4" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_194">
+                                <rect id="shopping-bag-line-4" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_4" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_195)">
+                            <path id="Vector-7" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/bed_TATRAN.jpeg" alt="Кровать TATRAN">
+                <a href="">
+                    <h3 class="card__product">Кровать TATRAN</h3>
+                </a>
+                <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный
+                    парящий эффект.</p>
+                <div class="card__box-price">
+                    <p class="card__price">120 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_196">
+                                    <rect id="basic-heart_outline-4" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_197)">
+                                <path id="coolicon-5" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_198">
+                                <rect id="shopping-bag-line-5" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_5" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_199)">
+                            <path id="Vector-8" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/chair_VILORA.jpg" alt="Кресло VILORA">
+                <a href="">
+                    <h3 class="card__product">Кресло VILORA</h3>
+                </a>
+                <p class="card__description">Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и
+                    приятная на ощупь ткань.</p>
+                <div class="card__box-price">
+                    <p class="card__price">21 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_200">
+                                    <rect id="basic-heart_outline-5" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_201)">
+                                <path id="coolicon-6" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_202">
+                                <rect id="shopping-bag-line-6" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_6" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_203)">
+                            <path id="Vector-9" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/table_MENU.jpeg" alt="Стол MENU">
+                <a href="">
+                    <h3 class="card__product">Стол MENU</h3>
+                </a>
+                <p class="card__description">Для того чтобы трапезничать было приятно, необходим правильный
+                    обеденный стол.</p>
+                <div class="card__box-price">
+                    <p class="card__price">34 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_204">
+                                    <rect id="basic-heart_outline-6" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_205)">
+                                <path id="coolicon-7" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_206">
+                                <rect id="shopping-bag-line-7" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_7" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_207)">
+                            <path id="path-10" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/chair_ASKESTA.jpeg" alt="Кресло ASKESTA">
+                <a href="">
+                    <h3 class="card__product">Кресло ASKESTA</h3>
+                </a>
+                <p class="card__description">Высокоэластичный пенополиуретан в «начинке» кресла надежен и долговечен
+                </p>
+                <div class="card__box-price">
+                    <p class="card__price">68 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_208">
+                                    <rect id="basic-heart_outline-7" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_209)">
+                                <path id="coolicon-8" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_210">
+                                <rect id="shopping-bag-line-8" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_8" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_211)">
+                            <path id="Vector-11" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/table_NORMAN.jpeg" alt="Стол NORMAN">
+                <a href="">
+                    <h3 class="card__product">Стол NORMAN</h3>
+                </a>
+                <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки
+                </p>
+                <div class="card__box-price">
+                    <p class="card__price">40 000 руб.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="icons">
+                    <span class="icons__favorite">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip256_212">
+                                    <rect id="basic-heart_outline-8" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <g clip-path="url(#clip256_213)">
+                                <path id="coolicon-9" d="M12 21C11.35 20.42 10.62 19.83 9.85 19.2L9.84 19.2C7.12 16.98 4.05 14.46 2.69 11.45C2.24 10.49 2.01 9.45 2 8.4C1.99 6.94 2.57 5.55 3.61 4.54C4.64 3.52 6.04 2.97 7.5 3C8.68 3 9.83 3.34 10.82 3.98C11.26 4.26 11.65 4.6 12 5C12.34 4.6 12.73 4.26 13.17 3.98C14.16 3.34 15.31 3 16.5 3C17.95 2.97 19.35 3.52 20.38 4.54C21.42 5.55 22 6.94 22 8.4C21.98 9.45 21.75 10.5 21.3 11.46C19.94 14.47 16.87 16.98 14.15 19.2L14.14 19.2C13.37 19.83 12.64 20.43 12 21L12 21ZM7.5 5C6.56 4.98 5.66 5.34 5 5.99C4.35 6.62 3.99 7.49 4 8.4C4.01 9.17 4.18 9.92 4.51 10.62C5.15 11.92 6.01 13.1 7.06 14.1C8.06 15.1 9.2 16.06 10.18 16.88C10.45 17.1 10.73 17.33 11.01 17.56L11.18 17.7C11.45 17.92 11.73 18.14 12 18.37L12.01 18.35L12.01 18.35L12.02 18.35L12.03 18.34L12.03 18.34L12.04 18.34L12.06 18.33L12.1 18.29L12.1 18.29L12.12 18.28L12.12 18.28L12.13 18.27L12.79 17.73L12.97 17.58C13.25 17.35 13.53 17.13 13.8 16.9C14.79 16.09 15.93 15.12 16.92 14.12C17.97 13.12 18.83 11.94 19.48 10.65C19.81 9.94 19.99 9.17 20 8.4C20 7.49 19.64 6.63 19 6C18.33 5.34 17.43 4.99 16.5 5C15.36 4.99 14.27 5.46 13.51 6.31L12 8.05L10.49 6.31C9.72 5.46 8.63 4.99 7.5 5Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
+
+                    </span>
+                    <span class="icons__cart">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip256_214">
+                                <rect id="shopping-bag-line-9" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            </clipPath>
+                        </defs>
+                        <rect id="shopping-bag-line_9" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                        <g clip-path="url(#clip256_215)">
+                            <path id="Vector-12" d="M7 8L7 6C7 4.67 7.06 2.93 8 2C8.93 1.06 10.67 1 12 1C13.32 1 15.06 1.06 16 2C16.93 2.93 17 4.67 17 6L17 8L20 8C20.26 8 20.81 7.81 21 8C21.18 8.18 21 8.73 21 9L21 21C21 21.26 21.18 21.81 21 22C20.81 22.18 20.26 22 20 22L4 22C3.73 22 3.18 22.18 3 22C2.81 21.81 3 21.26 3 21L3 9C3 8.73 2.81 8.18 3 8C3.18 7.81 3.73 8 4 8L7 8ZM7 10L5 10L5 20L19 20L19 10L17 10L17 12L15 12L15 10L9 10L9 12L7 12L7 10ZM9 8L15 8L15 6C15 5.2 14.56 4.56 14 4C13.43 3.43 12.79 3 12 3C11.2 3 10.56 3.43 10 4C9.43 4.56 9 5.2 9 6L9 8Z" fill="#C4C4C4" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                <img class="card__img" src="img/sofa_NASTAN.jpeg" alt="Диван NASTAN">
+                <a href="">
+                    <h3 class="card__product">Диван NASTAN</h3>
+                </a>
+                <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.
+                </p>
+                <div class="card__box-price">
+                    <p class="card__price">80 000 руб.</p>
+                </div>
+            </article>
+        </div>
+        <section class="catalog">
+            <a href="catalog.html" class="catalog__link">Перейти в каталог</a>
+        </section>
+    </section>
+
+
+    <footer class="footer center">
+        <a href="index.html" class="footer__logo"><img src="img/footer__logo.svg" alt="logo"></a>
+        <div class="footer__info">
+            <div class="menu-footer">
+                <h4 class="footer__heading">Меню</h4>
+                <nav class="navigation">
+                    <ul class="list list-column">
+                        <li><a href="index.html" class="list__link list__link-footer">Главная</a></li>
+                        <li><a href="catalog.html" class="list__link list__link-footer">Каталог</a></li>
+                        <li><a href="cart.html" class="list__link list__link-footer">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="contacts">
+                <h4 class="footer__contacts">Контакты</h4>
+                <div class="contacts__link">
+                    <a href="+79088008080" class="footer__contacts-link footer__contacts-link_color">+7 908 800 80 80</a>
+                    <a href="help@interier.com"
+                        class="footer__contacts-link footer__contacts-link_color">help@interier.com</a>
+                </div>
+
+                <div class="contacts__logo">
+                    <a href="img/vk.svg">
+                        <svg width="24.000488" height="14.000000" viewBox="0 0 24.0005 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path class="footer__contacts-logo" id="Vector-7" d="M23.45 0.94C23.61 0.4 23.45 0 22.65 0L20.03 0C19.36 0 19.05 0.34 18.88 0.72C18.88 0.72 17.55 3.92 15.66 6C15.04 6.6 14.77 6.79 14.43 6.79C14.27 6.79 14.01 6.6 14.01 6.05L14.01 0.94C14.01 0.29 13.83 0 13.27 0L9.15 0C8.73 0 8.48 0.3 8.48 0.59C8.48 1.21 9.42 1.35 9.52 3.1L9.52 6.9C9.52 7.73 9.37 7.88 9.03 7.88C8.14 7.88 5.98 4.67 4.69 1C4.44 0.28 4.19 0 3.52 0L0.9 0C0.15 0 0 0.34 0 0.72C0 1.41 0.89 4.79 4.14 9.28C6.31 12.34 9.37 14 12.15 14C13.82 14 14.02 13.63 14.02 12.99L14.02 10.68C14.02 9.94 14.18 9.79 14.71 9.79C15.1 9.79 15.77 9.99 17.33 11.46C19.11 13.21 19.4 14 20.4 14L23.03 14C23.78 14 24.15 13.63 23.93 12.9C23.7 12.18 22.85 11.12 21.72 9.88C21.11 9.17 20.19 8.4 19.91 8.02C19.52 7.53 19.63 7.31 19.91 6.87C19.91 6.87 23.11 2.45 23.44 0.94L23.45 0.94Z" fill="#888888" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="img/telegram.svg">
+                        <svg width="21.000000" height="17.675720" viewBox="0 0 21 17.6757" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path  class="footer__contacts-logo" id="Vector-8" d="M19.29 0.2L0.69 7.41C-0.06 7.74 -0.32 8.42 0.5 8.78L5.28 10.31L16.82 3.14C17.45 2.69 18.09 2.81 17.54 3.3L7.63 12.32L7.31 16.14C7.6 16.73 8.13 16.73 8.47 16.44L11.21 13.83L15.91 17.37C17 18.02 17.59 17.6 17.83 16.41L20.91 1.74C21.23 0.28 20.68 -0.37 19.29 0.2Z" fill="#888888" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </a>
+
+                    <a href="img/dzen.svg">
+                        <svg width="19.000000" height="18.000000" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path class="footer__contacts-logo" id="Vector-9" d="M11.33 10.73C9.83 12.19 9.73 14.01 9.6 18C13.52 18 16.23 17.98 17.62 16.7C18.98 15.37 19 12.69 19 9.09C14.79 9.22 12.87 9.32 11.33 10.73ZM0 9.09C0 12.69 0.01 15.37 1.37 16.7C2.76 17.98 5.47 18 9.39 18C9.26 14.01 9.16 12.19 7.66 10.73C6.12 9.32 4.2 9.21 0 9.09ZM9.39 0C5.48 0 2.76 0.01 1.37 1.29C0.01 2.62 0 5.31 0 8.9C4.2 8.77 6.12 8.67 7.66 7.26C9.16 5.8 9.26 3.98 9.39 0ZM11.33 7.26C9.83 5.8 9.73 3.98 9.6 0C13.52 0 16.23 0.01 17.62 1.29C18.98 2.62 19 5.31 19 8.9C14.79 8.77 12.87 8.67 11.33 7.26Z" fill="#888888" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+            <div class="connection">
+                <form class="form" action="#">
+                    <p class="form__updates form__p">Получайте наши новости и обновления</p>
+                    <input type="email" placeholder="Ваш e-mail" class="form__email">
+                    <button class="form__btn">Подписаться</button>
+                </form>
+            </div>
+    </footer>
+    
+</body>
+
+</html>
